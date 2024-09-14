@@ -18,7 +18,7 @@ class DeleteEmployee(BasePage):
         By.XPATH, '//button[@class="oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin"]')
 
     try:
-        # Navigating to edit employee page from dashboard page
+            # Navigating to edit employee page from dashboard page
         def go_to_delete_employee(self):
             self.click_element(self.PIM)
 
@@ -66,6 +66,7 @@ class DeleteEmployee(BasePage):
 
             # Printing success message
             print("Employee details deleted successfully")
-
+            
+            # printing Exception message if occurred
     except Exception as e:
         print(f"exception occurred in delete employee page  : {e}")
