@@ -15,17 +15,17 @@ class AddEmployee(BasePage):
     LAST_NAME = (By.XPATH, '//input[@placeholder="Last Name"]')
     ID = (By.XPATH, '(//input[@class="oxd-input oxd-input--active"])[2]')
     SAVE_BUTTON_1 = (By.XPATH, '// button[text() = " Save "]')
+
     LICENSE = (By.XPATH, '(//input[@class="oxd-input oxd-input--active"])[4]')
     NATIONALITY = (By.XPATH, '(//div[text()="-- Select --"])[1]')
     M_STATUS = (By.XPATH, '(//div[text()="-- Select --"])[2]')
     DOB = (By.XPATH, '//input[@placeholder="yyyy-dd-mm"]')
     BLOOD_GROUP = (By.XPATH, '(//div[text()="-- Select --"])[1]')
-    GENDER = (By.XPATH, '//label[text()="Male"]')
     SAVE_BUTTON_2 = (By.XPATH, '// button[text() = " Save "]')
-    success_toast_message = (By.XPATH, "//div[@id='oxd-toaster_1']")
+    
 
     try:
-        # Navigates to add employee page from dashboard page
+            # Navigates to add employee page from dashboard page
         def go_to_add_employee(self):
             self.click_element(self.PIM)
             self.click_element(self.ADD_BUTTON)
@@ -127,7 +127,7 @@ class AddEmployee(BasePage):
                 EC.element_to_be_clickable(self.BLOOD_GROUP)
             ).send_keys(rh)
 
-        #  clicking save button after entering the personal details of the employee
+            #  clicking save button after entering the personal details of the employee
         def click_save_2(self):
 
             # Wait for the element to be clickable then send keys
